@@ -1,0 +1,35 @@
+language: ruby
+rvm:
+- 2.6.3
+before_script:
+- chmod +x ./script/cibuild
+script: "./script/cibuild"
+branches:
+  only:
+  - master
+env:
+  global:
+  - secure: RnnciauFP/qW5XxnyJt/CpQEUeBd2cZA95w4MyNW8sN19PU84CYW/8oRCKDbUDsl3LWFXWbrk3Lqjtz78XCztoY2rvvQ3gcJjwuM42dpqQ5uAvmRbE1tzvfEMGjxzWX0Vh4J7XNR6MbLIQZ42Wr4je+fIB0ky8g93A1fdUT8HgrT1QxfXXbCXXVxTTU2n9JqhbM+VJsdXC0U6N/iJyFs96vNGQZygJbyWzn8KNGcXa/OCtzPn4jx0TTzmvsNKQ7sXPXlIgRu9elL1TLHxVaD4lEycC7FWSUS+dZPdxSpuzWw6Q9Ekp2wOqHxsHJqk1EPzxwiZS6P7LCaV77T3MWuTc5cBL441Zj+700MJtM93xmHQjo8EKd6q9/TskMabPeeSs6bpIJKdFac82JJk1R/4PKYwPCdzO/ckz1RKZC2xLqU00mxRU2AziLL8YoTRFt6s5LSVUlYAxDif6hylNo7bewmJaJLfQjoumGpx6yUUzXcrowIy3dLaqTiFgZ0Sfby/X82T6+/F2LFTmv8QhHCz01SxVjJl69NKKdmq08ozkzc+S9H+xpiCg2lrBynph9AYcsf44ZfcX/HnCk0PeGYsebUHbsIz/n+DX+g9JEtmS/5oJbsJZ26XTwhq444H/7W38gu9vS0QlG+Lp/CrQyIAceWkwiuW397pv4EmjCdmvo=
+  - secure: N+IkuMEfRms/jDN2Jj2VPYE9XnKbXZNfTfkpL561eyjb1aLp4ouXD1o2Z3H7RT3UdvS3GWdAJ53B3enLVSlaB+wXjTWGWZK84elOouWmD8Hzlclc6upXZ1rSPILuo65PkPoFbuHjKxxaNzly7F0N0i93jY5DQ6bCwjxFsNfKjBCd4FfLZMXPxGJdW8q20iNz2X1EpWCRbqaji1Awb9/bXaqJ2lcW34n/pmL9RIm7tqnffbdJO9ZhqHDa2E3PjDjoHKwmFcEmWciQig1cwUBev1+cM06jwKLhzt6bBePkzbk3+tQZUGAe9HmxKqeSc2UP83XuGIF5PjUxkRxgBvrzyRgdfbcoWNMsZCmTzyMEBgZwpurV2PAT4QxXhP07t7RTcYzm+/iWQjxss9ZZpuUFxy480MS5TuKfLFEKsAN1eraZnzWOyQDDc18zU73jKo8AmL/vzIqZFUFIRf6CoMsHzHzNw7D1HK3cMh9V00hmQkAcvnSFHbpFdZMbt55At3TTfAaD/NVASGmE4zoCsUovBh0igK4CNFHCgdFYVEX0/+FuQZ7vSkfxlJlrFsY3C9VPbDOm+Xz+smlBqqgOxKt9karuGQD7O2DGQ1hhJB+r3hGZRN5OIxeUYVfgibYjv97lwdABvL4XF74+0CXJlNbmilwbHh0ApnQJMrbIyiXgCTc=
+  - secure: FNiaKVSu3z0FhSeKu8QIRsl1VRDM0au6MfgE7zk++OzopaNUjEURpX54FZrIFYQ8kVDviA9Uqa3LRJ+sCXCY3zSTPPV/DQTyQKOniE9fS5y4cvNJJnKzQcEb34u6vhoUxJKqdrtRLCDXT7FQTBNZrmra6rugf6i8xtzbWMqJbUFVSyaAGcCKqcM9qEMRRsxCkpZuLP0G6i7q1RnXD70vO9Dgjco8NB2ikq7JsA7z3LN9jK7hAeqeXyJGHSu0WmQP7YVpNZ81rhIhLxOS6ZVSHOrWSC0oo3DjG/dRVM2FWORkl/exM2igVNaJ2abq/DlLb0IUa3eQCqJlpW1aT1cY6hm8UBLTauwCMtx+zEoPxVx+gpdFbbzKYD4/vzYkPLApNH2ficmm9xmCcjUsJ2eBKu/WtIDUiXV3NZxQZiXC9CWHDctnryY6RwKHTf+WY1y59olseNU1khlGttzC4Lgpw/R7Livk0FW+NDmJX8d3JvCmILBsNU4gE5izjNqxAz8njW2E6OJK4a0piRk0vo+i2vO53U0iVRmW3Ub0jVWIpsYT/DOkFFFQhkVqJji1VQlbUYG6a9uLeEv7mrcHMKoTIBvd0Z7OJTstDBxOgES/1cg1/uqLoPE0jPUKL6hgUvD5KpMWBjH8j/LsMSFby/tUKzmt0S7xVykUWJFiyz/PmBQ=
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+sudo: false
+cache: bundler
+notifications:
+  email: false
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv
+  -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
+- echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --quiet --delete-after _site/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+  on:
+    branch: master

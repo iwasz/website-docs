@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   User manuals, FAQs, high res photos, DFU instructions, and source code build instructions can 
   be found here, as well as other stuff. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://iwasz.stronazen.pl" 
+url: "http://doc.iwasz.com" 
 twitter_username: 
 github_username:  iwasz
 

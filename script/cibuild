@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e # halt script on error
+
+bundle exec jekyll build
+# Base-url hack
+# ln -s . _site/blog
+bundle exec htmlproofer ./_site --disable-external --url-ignore "/hashover/comments.php,#"
