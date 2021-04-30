@@ -58,15 +58,63 @@ The `isCounting` command returns `1` if the stopwatch is running. If it's not, t
 
 # Device state
 # `reset`
-# `factory`
+Resets the stopwatch. Whether the device is currently running or displaying the last result, this command will reset it, and `000000` will appear on the display.
+
 # `battery`
 
 # Settings (persistent)
+# `factory`
+Clears all the persistent settings from the flash. All settings are thus restored to their default state, which is equivalent to issuing the following set of commands:
+
+```
+res 10ms
+bright auto
+mode stop // This is currently not implemented
+auto none
+flip 0
+ir 1
+sn 1
+blind 5000
+trigger 10
+fps 30
+```
+
+All the commands for storing persistent settings are described below.
+
 # `flip`
+The command `flip 1` flips the font displayed on the LED display upside down (except for the coma sign). The command `flip 0` restores the display right side up again. The `flip` without any arguments shows the current value of the setting.
+
 # `ir`
+Every stopwatch receiver has an IR sensitive element on the left side (there's an orifice on the left wall which prevents unwanted DC ambient light getting inside). This built-in sensor may be turned off, issuing the command `ir 0`, or turned on by using `ir 1`. `ir` without any arguments shows the current value of the setting.
+
+It is very important to remember to turn the built-in sensor off (the default) if it is not needed, for example, when using an external sensor. This is to prevent unwanted IR signals from interfering with the device. 
+
+Another possibility is to set up a system consisting of the receiver (a stopwatch with a display with it's internal sensor turned on) + transmitter as a gate 1 and additionally external receiver + another transmitter as a gate 2. [See ... for more info about possible setups]().
+
 # `sn`
+This command follolwed by an argument `1` or `0` turns the built-in buzzer on or off. The `ir` without any arguments shows the current value of the setting.
+
 # `res`
+The command `res` sets the resolution presented on the LED screen (and only there). It can be followed by an argument:
+
+* `10ms` (the default)
+* `1ms`
+* `100us`
+* `10us`
+
+Issuing the command without any parameters outputs the value of the setting. 
+
 # `bright`
+The command `bright` governs how bright is the LED display. It accepts single argument which has five possible values: 
+
+* `1` the dimmest
+* `2`
+* `3`
+* `4` the brightest
+* `auto` the brightness is adjusted automatically according to the built-in photo-resistor located near the buzzer (the default)
+
+Issuing the command without any parameters outputs the value of the setting. 
+
 # `blind`
 # `fps` (experimental)
 # `trigger` (experimental)
