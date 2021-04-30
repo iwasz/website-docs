@@ -5,7 +5,7 @@ parent: Gp8 stopwatch
 nav_order: 4
 ---
 # Windows
-Windows versions prior to Windows 10 require a driver to be installed. You can find it in [this link](https://www.st.com/en/development-tools/stsw-stm32102.html). Unfortunately an email address is required in the process.
+Windows versions prior to Windows 10 require a driver installation. You can find it in [this link](https://www.st.com/en/development-tools/stsw-stm32102.html). Unfortunately, an email address is required in the process.
 
 ![Download the driver](01-con-driver-web.png)
 
@@ -34,7 +34,7 @@ Use your favorite serial terminal:
 dterm /dev/ttyACM0 115200
 ```
 
-In case of any trouble turn the stopwatch off, run `dmesg -w`, and observe the kernel logs after powering the stopwatch again. You should see something like this:
+In case of any trouble, turn the stopwatch off, run `dmesg -w`, and observe the kernel logs after powering the stopwatch again. You should see something like this:
 
 ```
 [15720.611477] usb 2-4.2.2: new full-speed USB device number 15 using xhci_hcd
