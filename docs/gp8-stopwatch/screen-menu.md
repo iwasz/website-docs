@@ -1,10 +1,10 @@
 ---
 layout: default
-title: On-screen menu
+title: Overview
 parent: Gp8 stopwatch
-nav_order: 1
+nav_order: 2
 ---
-Right after powering on the stopwatch is in the main mode (let's call it a stopwatch mode). To cycle through the rest of the available menu options, you press the button briefly (a *short-press* later on throughout the docs). To change the setting, you usually press the button once, but this time a little longer (*long-press* later on). This works for boolean settings like *sound on/off* or *IR on/off*. There are settings that are changed slightly differently, so read on.
+Right after powering on, the stopwatch is in the main mode (let's call it a stopwatch mode). To cycle through the rest of the available menu options, you press the button briefly (a *short-press* later on throughout the docs). To change the setting, you usually press the button once, but this time a little longer (*long-press* later on). This works for boolean settings like *sound on/off* or *IR on/off*. There are settings that are changed slightly differently, so read on.
 
 * **Stopwatch mode** : in this mode the stopwatch waits for an IR beam, or for external sensors to be connected, and does its usual job of tracking time in case of a trigger event.
   * *Short-press* for the next mode.

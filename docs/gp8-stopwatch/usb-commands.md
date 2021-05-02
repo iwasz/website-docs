@@ -1,8 +1,8 @@
 ---
 layout: default
-title: USB serial options
+title: USB commands
 parent: Gp8 stopwatch
-nav_order: 2
+nav_order: 3
 ---
 To see how to install drivers and then issue commands under Windows or Linux see [USB drivers installation](usb-drivers.html). All commands are case insensitive, but here are presented using "camelCase". 
 
@@ -105,7 +105,7 @@ The command `res` sets the resolution presented on the LED screen (and only ther
 Issuing the command without any parameters outputs the value of the setting. 
 
 # `bright`
-The command `bright` governs how bright is the LED display. It accepts single argument which has five possible values: 
+The command `bright` governs how bright is the LED display. It accepts a single argument which has five possible values: 
 
 * `1` the dimmest
 * `2`
@@ -116,15 +116,15 @@ The command `bright` governs how bright is the LED display. It accepts single ar
 Issuing the command without any parameters outputs the value of the setting. 
 
 # `blind`
-The `blind` command folowed by the number of milliseconds, enables the so called "blind period". This period occurs after each trigger event (just after stopwatch starts or stops) and during that time, the stopwatch does not react to any trigger events. By default this setting equals 5000ms. For example if somebody would cross the gate less than 5000ms after the stopwatch started, nothing would happen. 
+The `blind` command followed by the number of milliseconds enables the so-called *blind period*. This period occurs after each trigger event (just after the stopwatch starts or stops), and during that time, the stopwatch does not react to any trigger events. By default this setting equals 5000ms. For example if somebody would cross the gate less than 5000ms after the stopwatch started, nothing would happen. 
 
 Issuing the command without any parameters outputs the value of the setting. 
 
 # `fps` (experimental)
-The command `fps` followed by an integer sets the refresh rate of the LED display in the reange from 20 to 1000 Hz. The feature is intended for slowmo video, and for now is experimental and may be changed in the future.
+The command `fps` followed by an integer sets the refresh rate of the LED display in the range from 20 to 1000 Hz. The feature is intended for slow-mo video, and for now is experimental and may be changed in the future.
 
 # `trigger` (experimental)
-The `trigger` command followed by integer number of milliseconds tells the device what is the *minimum* trigger event length. This means that if the IR barier is disrupted for less than this setting, the stopwatch won't start or stop. The default value equals 10ms.
+The `trigger` command followed by integer number of milliseconds tells the device what is the *minimum* trigger event length. This means that if the IR beam was interrupted for less than this setting, the stopwatch won't start or stop. The default value equals 10ms.
 
 Issuing the command without any parameters outputs the value of the setting. 
 
@@ -154,9 +154,9 @@ ir_sensor 3407885 1 0 0 0
 ```
 
 The columns have the following meaning:
-* `type` is the device type. For instance `receiver` is for the stopwatch with a LED display, and `ir_sensor` is for the small external one.
+* `type` is the device type. For instance, `receiver` is for the stopwatch with a LED display, and `ir_sensor` is for the small external one.
 * `uid` : an unique ID.
-* `active` tells if the device is active, which for the receivers tells if their IR sensor is on or off. Only `receivers` allow the sensor to be turned on/off. This value correspods to the `ir` command.
+* `active` tells if the device is active, which for the receivers tells if their IR sensor is on or off. Only `receivers` allow the sensor to be turned on/off. This value corresponds to the `ir` command.
 * `beam` tells if the IR sensor sees the carrier signal (the IR signal).
-* `noise` tells whether the receiver experiences noise which prevents its normal operation. 
-* `noise_level` is the severity of the noise, and can be between 0 and 15. This value helps to set up the receivers in the presence of intensive sunlight. Preffered value here is of course `0`.
+* `noise` tells whether the receiver experiences noise that prevents its normal operation. 
+* `noise_level` is the severity of the noise and can be between 0 and 15. This value helps to set up the receivers in the presence of intensive sunlight. The preferred value here is `0`.
