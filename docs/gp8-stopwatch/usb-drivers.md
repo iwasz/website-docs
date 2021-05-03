@@ -2,7 +2,7 @@
 layout: default
 title: USB drivers installation
 parent: Gp8 stopwatch
-nav_order: 5
+nav_order: 6
 ---
 # Windows
 Windows versions prior to Windows 10 require a driver installation. You can find it in [this link](https://www.st.com/en/development-tools/stsw-stm32102.html). Unfortunately, an email address is required in the process.

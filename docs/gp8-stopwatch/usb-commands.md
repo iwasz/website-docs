@@ -2,7 +2,7 @@
 layout: default
 title: USB commands
 parent: Gp8 stopwatch
-nav_order: 3
+nav_order: 4
 ---
 To see how to install drivers and then issue commands under Windows or Linux see [USB drivers installation](usb-drivers.html). All commands are case insensitive, but here are presented using "camelCase". 
 

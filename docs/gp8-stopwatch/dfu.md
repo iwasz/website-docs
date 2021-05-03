@@ -2,7 +2,7 @@
 layout: default
 title: Device firmware update
 parent: Gp8 stopwatch
-nav_order: 4
+nav_order: 5
 ---
 # Firmware
 The newest firmware can be always [found here](https://github.com/gp8-stopwatch/receiver-firmware/releases). Always pick up the newest one.

@@ -2,10 +2,12 @@
 layout: default
 title: Gate setup
 parent: Gp8 stopwatch
-nav_order: 1
+nav_order: 2
 ---
 # Possible configurations
-## Built-in receiver
+A transmitter with a receiver is called *a gate*. Crossing such a gate triggers the Gp8 laptimer causing it to start or stop. A number of different setups exist.
+
+## Built-in receiver only
 In this configuration, the gate is formed using a transmitter (left side of the picture), and the Gp8 laptimer with the internal sensor turned on. 
 
 ![Gate TX RX](gate-tx-rx.png)
