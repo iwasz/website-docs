@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Overview
+title: On-screen menu
 parent: Gp8 stopwatch
 nav_order: 2
 ---
