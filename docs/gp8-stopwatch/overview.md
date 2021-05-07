@@ -7,7 +7,7 @@ nav_order: 1
 # Stopwatch
 Depicted below is the top view of the stopwatch:
 
-![Receiver](receiver.png)
+![Receiver](img/receiver.png)
 
 * **IR sensor** along with the IR transmitter form a gate. Object crossing that gate triggers the stopwatch starting or stopping it. 
 * **Button** lets you to cycle through available options and to change some of them. See [On-screen menu](screen-menu.html) section.
@@ -20,7 +20,7 @@ Depicted below is the top view of the stopwatch:
 
 # Transmitter
 
-![TX](transmitter1.png)
+![TX](img/transmitter1.png)
 
 The transmitter consists of:
 * **USB** socket for charging internal LiPo battery.
@@ -32,7 +32,7 @@ The transmitter consists of:
 # External receiver
 One or more external receivers can be connected to the stopwatch. Each receiver needs its own transmitter. Together they form a light barrier also referred to as a *gate* throughout this documentation.
 
-![Micro](micro.png)
+![Micro](img/micro.png)
 
 * **IR sensor** : infraref sensitiove element. Point it towards the transmitter's IR LED.
 * **Peripheral cable** connects the micro receiver to the main stopwatch.
