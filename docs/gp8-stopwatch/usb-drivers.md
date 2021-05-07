@@ -7,23 +7,23 @@ nav_order: 6
 # Windows
 Windows versions prior to Windows 10 require a driver installation. You can find it in [this link](https://www.st.com/en/development-tools/stsw-stm32102.html). Unfortunately, an email address is required in the process.
 
-![Download the driver](01-con-driver-web.png)
+![Download the driver](img/01-con-driver-web.png)
 
 Install the driver:
 
-![Install the driver](02-installer-win-7.png)
+![Install the driver](img/02-installer-win-7.png)
 
 Connect the gp8 stopwatch, turn it on and observe if it is actually recognized by Windows. You can use Windows Device Manager for this:
 
-![Windows device manager](03-com-port-visible.png)
+![Windows device manager](img/03-com-port-visible.png)
 
-Download and install [Putty](https://www.putty.org/) and open it. You will be presented with a configuration dialog where you need to set the "Serial" option using radio buttons depicted below. Set "Serial line" to the value observbed in the previous step and set "Speed" to 115200 baud. 
+Download and install [Putty](https://www.putty.org/) and open it. You will be presented with a configuration dialog where you need to set the "Serial" option using radio-buttons depicted below. Set "Serial line" to the value observbed in the previous step and set "Speed" to 115200 baud. 
 
-![Putty settings](04-putty-connect.png)
+![Putty settings](img/04-putty-connect.png)
 
 Click open, and a terminal window should appear:
 
-![Putty console](05-putty-running.png)
+![Putty console](img/05-putty-running.png)
 
 Input "help" for available commands.
 
