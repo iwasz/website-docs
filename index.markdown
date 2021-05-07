@@ -4,4 +4,8 @@
 
 layout: home
 ---
-<!-- aaaaa -->
+Here is the documentation for the following products:
+
+[GP8 stopwatch and laptimer](docs/gp8-stopwatch)
+
+[![Gp8-stopwatch](docs/gp8-stopwatch.png)](docs/gp8-stopwatch)

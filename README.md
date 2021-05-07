@@ -1,10 +1,8 @@
 Documentation regarding products from https://iwasz.com
 Work in progress
 
-# TODO
-* Possible connections
-* Rough state machine description (simplified) - blind 
-* Pictures 
+# Links
+* Theme used : [Just The Docs](https://pmarsceill.github.io/just-the-docs/)
 
 # Jekyll / Ruby oddities
 After some time, I was unable to build this website even though Travis accepted it happily.
@@ -21,3 +19,9 @@ bundle exec jekyll serve --livereload
 ```
 
 Then I pointed my browser to [http://127.0.0.1:4000/docs/gp8-stopwatch/](http://127.0.0.1:4000/docs/gp8-stopwatch/)
+
+# TODO
+* [x] Possible connections
+* [ ] Rough state machine description (simplified) - blind 
+* [x] Pictures 
+
